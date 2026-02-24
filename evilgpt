@@ -1,0 +1,35 @@
+#!/bin/bash
+
+Black='\033[0;30m'        # Black
+Red='\033[0;31m'          # Red
+Green='\033[0;32m'        # Green
+Yellow='\033[0;33m'       # Yellow
+Blue='\033[0;34m'         # Blue
+Purple='\033[0;35m'       # Purple
+Cyan='\033[0;36m'         # Cyan
+White='\033[0;37m'        # White
+NC='\033[0m' # No Color
+echo -e "${Yellow}
+____   ____                           .__        
+╲   ╲ ╱   ╱__  ___       _____ _____  │__│ ____  
+ ╲   Y   ╱╲  ╲╱  ╱      ╱     ╲╲__  ╲ │  │╱    ╲ 
+  ╲     ╱  >    <      │  Y Y  ╲╱ __ ╲│  │   │  ╲
+   ╲___╱  ╱__╱╲_ ╲_____│__│_│  (____  ╱__│___│  ╱
+                ╲╱_____╱     ╲╱     ╲╱        ╲╱ 
+    ------------------------------------
+     AUTHOR     : Vx_main
+     ENGINE     : EvilGPT v5.0
+     API BY     : PROF_NOOB
+    ------------------------------------
+    [!] System status: Maliciously Stable
+ ${NC}"
+
+echo -e "${Red}Initializing EvilGPT connection...${NC}"
+
+echo -e "${Cyan}###############################<**>##################################${NC}${Green}"
+uin=$1
+uprompt=${uin//" "/"+"}
+#echo $uprompt
+#echo $(curl "https://discord.addja48.workers.dev/api/chat/evil_gpt/$(echo $uprompt)?format=json" -s -v)
+echo -e $(curl "https://discord.addja48.workers.dev/api/chat/evil_gpt/$(echo $uprompt)?format=json" -s| jq '.response')
+echo -e "${NC}${Cyan}###############################<**>##################################${NC}"
